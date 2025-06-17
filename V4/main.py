@@ -35,8 +35,9 @@ def main():
     # Load configuration
     config = Config(args.config)
     
-    # Set random seed
+    # Set random seed for reproducibility
     set_random_seed(config.SEED)
+    
     
     # Initialize components
     data_loader = HousingDataLoader(config)
