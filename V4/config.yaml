@@ -1,0 +1,25 @@
+SEED: 42
+
+DATA_PATHS:
+  train: "../house-prices-advanced-regression-techniques/train.csv"
+  test: "../house-prices-advanced-regression-techniques/test.csv"
+
+MODEL:
+  hidden_sizes: [128, 64]
+  dropout_rate: 0.2
+  learning_rate: 0.01
+  weight_decay: 0.0001
+  batch_size: 128
+  epochs: 200
+  patience: 10
+
+PREPROCESSING:
+  val_ratio: 0.20
+  fill_numeric_with: "mean"
+  fill_categorical_with: "Missing"
+  scaling_method: "standard"
+
+CV:
+  k_folds: 5
+  cv_epochs: 100
+  cv_batch_size: 64
